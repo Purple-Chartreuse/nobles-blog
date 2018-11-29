@@ -1,0 +1,21 @@
+<style>
+
+.color_text {
+  color: <%= @color %>;
+  background-color: black;
+}
+
+</style>
+
+<h1 class="color_text">
+
+<%= @color %>
+
+</h1>
+
+<%= form_tag index_path do %>
+
+<p><%= text_field_tag :name, nil, placeholder: "Enter a name:" %></p>
+<p><%= submit_tag :submit %></p>
+
+<% end %>

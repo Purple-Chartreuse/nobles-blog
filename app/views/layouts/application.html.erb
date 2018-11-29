@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Noble's Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="jumbotron">
+      <header class="jumbotron_font">Noble's Blog<header>
+    </div>
+
+    <div class="icon-bar">
+      <a href="posts"><i class="fas fa-home"></i></a>
+      <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.google.com"><i class="fab fa-google"></i></a>
+    </div>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+
+  </body>
+</html>
