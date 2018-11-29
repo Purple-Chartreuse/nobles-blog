@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<br />
 <div class="well well-lg">
 <p>
   <strong>Title:</strong>
@@ -7,7 +8,10 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.author %>
+  <%= @post.user.username %>
+  <% if current_user.avatar.url != nil %>
+    <%= image_tag current_user.avatar.url, size: 40 %>
+  <% end %>
 </p>
 
 <p>
@@ -20,9 +24,10 @@
 
   <% @post.comments.each do |comment| %>
     <div class="well well-sm">
-      <%= comment.author %> says... <br />
+      <%= comment.user.username %>
+      <%= image_tag current_user.avatar.url, size: 40 %> <br />
       <%= comment.comment_entry %> <br />
-      <%= comment.created_at %>
+      <%= comment.created_at %> <br />
     </div>
   <% end %>
 </div>

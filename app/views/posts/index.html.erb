@@ -16,7 +16,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.author %></td>
+        <td><%= post.user.username %></td>
         <td><%= post.blog_entry %></td>
         <td><%= post.created_at %></td>
         <td><button type="button" class="btn btn-primary"><%= link_to 'Show', post %></button></td>
