@@ -35,5 +35,7 @@
   <% end %>
 </div>
 </div>
-<button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_post_path(@post) %></button> |
-<button type="button" class="btn btn-primary"><%= link_to 'Back', posts_path %>
+<button type="button" class="btn btn-primary"><%= link_to 'Back', posts_path %> <br />
+<% if current_user.username == @post.user.username %>
+<button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_post_path(@post) %></button>
+<% end %>
