@@ -18,7 +18,7 @@
         <td><%= post.title %></td>
         <td><%= link_to post.user.username, user_posts_path(name: post.user.username) %></td>
         <td><%= post.blog_entry %></td>
-        <td><%= post.created_at %></td>
+        <td><%= local_time(post.created_at) %></td>
         <td><button type="button" class="btn btn-primary"><%= link_to 'Show', post %></button></td>
         <td><button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_post_path(post) %></button></td>
         <td><button type="button" class="btn btn-danger"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>

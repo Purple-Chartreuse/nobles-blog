@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+
+$chakra-petch: 'Chakra Petch', sans-serif;
+
 body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: $chakra-petch, sans-serif;
+  font-size: 14px;
   line-height: 18px;
 }
 
+strong {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: $chakra-petch, sans-serif;
+  font-size: 14px;
   line-height: 18px;
 }
 

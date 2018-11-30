@@ -18,6 +18,13 @@
 @import 'bootstrap';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+
+$chakra-petch: 'Chakra Petch', sans-serif;
+
+body {
+  font-family: $chakra-petch, sans-serif;
+}
 
 .jumbotron {
   background-color: #4B0082;
@@ -28,10 +35,6 @@
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-}
-
-#comments {
-
 }
 
 .icon-bar {

@@ -20,15 +20,17 @@
   <%= @post.blog_entry.html_safe %>
 </p>
 
+<br />
+
 <div id="comments">
   <%= render 'comments/form', comment: @comment %>
 
   <% @post.comments.each do |comment| %>
     <div class="well well-sm">
       <%= image_tag current_user.avatar.url, size: 40 %>
-      <%= link_to comment.user.username, user_posts_path(name: @post.user.username) %> commented... <br />
-      <%= comment.comment_entry %> <br />
-      <%= comment.created_at %> <br />
+      <%= link_to comment.user.username, user_posts_path(name: @post.user.username) %> commented... <br /><br />
+      <%= comment.comment_entry %> <br /><br />
+      <%= local_time(comment.created_at) %> <br />
     </div>
   <% end %>
 </div>
