@@ -1,0 +1,14 @@
+<h1> All posts by <%= @user.username %></h1>
+
+<% @user.posts.each do |post| %>
+  <div class="well">
+    <h3><%= post.user.username %></h3> says... <br />
+    <p><%= post.blog_entry.html_safe %></p>
+  </div>
+  <button type="button" class="btn btn-primary"><%= link_to 'Show', post %></button>
+  <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_post_path(post) %></button>
+  <button type="button" class="btn btn-danger"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  <br />
+  <br />
+
+<% end %>
